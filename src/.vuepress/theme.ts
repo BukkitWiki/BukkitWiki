@@ -10,7 +10,7 @@ export default hopeTheme({
 
   logo: "http://localhost:8080/logo.svg",
 
-  // repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "BukkitWiki/BukkitWiki",
 
   docsDir: "src",
 

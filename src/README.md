@@ -2,7 +2,7 @@
 home: true
 icon: ic:outline-home
 title: 主页
-heroImage: http://localhost:8080/logo.svg
+heroImage: http://bukkit.wiki/logo.svg
 # heroFullScreen: true
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
