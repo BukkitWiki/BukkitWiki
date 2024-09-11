@@ -80,6 +80,6 @@ const data = [
     :desc="i.desc"
     :url="i.url?i.url:('https://bukkit.wiki/plugins/plugins/'+i.name.toLowerCase())"
     :logo="i.logo?i.logo:('http://bukkit.wiki/logo.svg')"
-    :preview="i.preview?i.preview:('http://localhost:8080/assets/image/card.png')"
+    :preview="i.preview?i.preview:('http://bukkit.wiki/assets/image/card.png')"
   />
 </div>
