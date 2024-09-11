@@ -69,7 +69,9 @@ jobs:
 
         # 构建项目
       - name: Build blog project
-        run: pnpm build docs:build
+        run: |
+          echo ${{ github.workspace }}
+          pnpm docs:build
 
         # 资源拷贝
       - name: Build with Jekyll
