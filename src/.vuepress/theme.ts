@@ -50,7 +50,7 @@ export default hopeTheme({
     },
 
     components: {
-      components: ["Badge", "VPCard","SiteInfo","BiliBili"],
+      components: ["Badge", "VPCard","SiteInfo","BiliBili","VidStack"],
     },
 
     // searchPro: true,
