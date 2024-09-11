@@ -8,7 +8,7 @@ export default hopeTheme({
 
   iconAssets: "iconify",
 
-  logo: "http://localhost:8080/logo.svg",
+  logo: "http://bukkit.wiki/logo.svg",
 
   repo: "BukkitWiki/BukkitWiki",
 
