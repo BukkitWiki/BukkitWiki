@@ -40,7 +40,7 @@ features:
 
 
 copyright: false
-footer: 使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2019-至今 Mr.Hope
+footer: BukkitWiki | 版权所有 © 2024
 ---
 <script setup>
 const updateDate = '2024/9/11'
