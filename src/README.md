@@ -17,10 +17,33 @@ actions:
     type: primary
 
 
+features:
+  - title: 插件
+    icon: catppuccin:wxt
+    details: 多人联机服务器插件资源
+    link: /plugins/
+
+  - title: 衍生资源
+    icon: catppuccin:unity
+    details: 包括但不限于插件配置、游戏地图、皮肤、脚本资源等
+    link: /resources/
+
+  - title: 文字教程
+    icon: catppuccin:lib
+    details: 开服教程、插件使用技巧、原版游戏技巧等等
+    link: /books/
+
+  - title: 工具箱
+    icon: catppuccin:makefile
+    details: 开服工具箱
+    link: /tools/
+
+
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2019-至今 Mr.Hope
 ---
 <script setup>
+const updateDate = '2024/9/11'
 const data = [
   {
     name: 'Taboolib',
@@ -29,6 +52,11 @@ const data = [
   {
     name: 'Trmenu',
     desc: '菜单'
+  },
+  {
+    name: 'MythicMobs',
+    desc: '',
+
   }
 ]
 
@@ -41,7 +69,7 @@ const data = [
 <h2 class='vp-feature-header'><a class="header-anchor" id="热门项目" href="#热门项目"  style="font-weight:600;color: var(--text-color-lighter);">热门项目</a></h2>
 :::
 ::: right
-更新时间: 2024/9/11
+更新时间: {{ updateDate }}
 :::
 
 <div class="vp-card-container">
@@ -50,8 +78,8 @@ const data = [
     style="height: 220px;width: 320px"
     :name="i.name"
     :desc="i.desc"
-    url="https://mister-hope.com"
-    logo="https://mister-hope.com/logo.svg"
-    preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg"
+    :url="i.url?i.url:('https://bukkit.wiki/plugins/plugins/'+i.name.toLowerCase())"
+    :logo="i.logo?i.logo:('http://bukkit.wiki/logo.svg')"
+    :preview="i.preview?i.preview:('http://localhost:8080/assets/image/card.png')"
   />
 </div>
