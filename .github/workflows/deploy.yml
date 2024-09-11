@@ -1,91 +1,52 @@
-name: Deploy Pages
 
-# 触发条件，push到main分支或者pull request到main分支
+name: 部署文档
+
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches:
+      - main
 
-  # 支持手动在工作流上触发
-  workflow_dispatch:
-
-# 设置时区
-env:
-  TZ: Asia/Shanghai
-
-# 权限设置
 permissions:
-  # 允许读取仓库内容的权限。
-  contents: read
-  # 允许写入 GitHub Pages 的权限。
-  pages: write
-  # 允许写入 id-token 的权限。
-  id-token: write
+  contents: write
 
-# 并发控制配置
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
-# 定义执行任务
 jobs:
-  # 构建任务
-  build:
-
+  deploy-gh-pages:
     runs-on: ubuntu-latest
-
-    # node v20 运行
-    strategy:
-      matrix:
-        node-version: [20]
-
     steps:
-      # 拉取代码
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          # 保留 Git 信息
           fetch-depth: 0
+          # 如果你文档需要 Git 子模块，取消注释下一行
+          submodules: true
 
-      # 设置使用 Node.js 版本
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          version: 8
 
-      # 使用 最新的 PNPM
-      # 你也可以指定为具体的版本
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
         with:
-          version: latest
-          # version: 9
-          run_install: false
+          node-version: 20
+          cache: pnpm
 
-        # 安装依赖
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-        # 构建项目
-      - name: Build blog project
+      - name: 安装依赖
         run: |
-          echo ${{ github.workspace }}
-          pnpm docs:build
+          corepack enable
+          pnpm install --frozen-lockfile
 
-        # 上传 _site 的资源，用于后续部署
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: 构建文档
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |-
+          pnpm run docs:build
+          > src/.vuepress/dist/.nojekyll
 
-  # 部署任务
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
+      - name: 部署文档
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 部署文档
+          branch: gh-pages
+          folder: src/.vuepress/dist
