@@ -39,25 +39,11 @@ QQ交流群： 642468469
 更多功能请查看详细文档和预览下面视频
 
 ### 演示视频 (宝石增强)
-<VidStack
-  title="UIFarm演示视频 宝石增强"
-  :src="[
-    {
-      src: 'http://sjnwjp51g.hn-bkt.clouddn.com/ui%E5%86%9C%E5%9C%BA%20%E8%A3%85%E5%A4%87%E5%A2%9E%E5%BC%BA%E6%B5%8B%E8%AF%95%E8%A7%86%E9%A2%91.mp4?e=1726081546&token=qGvWnXKsrgF4cE7djntCwjemaaua-IK-ihAZ85G9:3115o2lDgl4rZnW5Nsah2ejxj-s=',
-      type: 'video/mp4',
-    },
-  ]"
-/>
+<BiliBili bvid="BV1eT4EeNEPA" />
+
 
 ### 演示视频 (铁锭种子)
-<VidStack
-  title="UIFarm演示视频 铁锭种子"
-  :src="[
-    {
-      src: 'http://sjnwjp51g.hn-bkt.clouddn.com/ui%E5%86%9C%E5%9C%BA%20%E9%93%81%E9%94%AD%E7%A7%8D%E5%AD%90%E6%B5%8B%E8%AF%95%E8%A7%86%E9%A2%91.mp4?e=1726082243&token=qGvWnXKsrgF4cE7djntCwjemaaua-IK-ihAZ85G9:Dtv0qNKaKOa-itn4dHcLi-v0T1s=',
-      type: 'video/mp4',
-    },
-  ]"
-/>
+
+<BiliBili bvid="BV1vN4EeiEaG" />
 
 
