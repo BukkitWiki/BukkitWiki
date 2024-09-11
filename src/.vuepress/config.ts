@@ -25,6 +25,11 @@ export default defineUserConfig({
     {},
     "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-CCGWVPNMF9');"
   ] 
+  ,[
+    'script',
+    {},
+    "var _hmt=_hmt||[];(function(){var hm=document.createElement('script');hm.src='https://hm.baidu.com/hm.js?0d4853b25e20a42ca6c79d9b772e6b88';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm,s)})();"
+  ]
   ] 
 
 
