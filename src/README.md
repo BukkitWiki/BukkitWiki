@@ -16,27 +16,28 @@ actions:
     link: ./guide/
     type: primary
 
+highlights:
+  - description: '快捷入口'
+    features:
+      - title: 插件
+        icon: catppuccin:wxt
+        details: 多人联机服务器插件资源
+        link: /plugins/
 
-features:
-  - title: 插件
-    icon: catppuccin:wxt
-    details: 多人联机服务器插件资源
-    link: /plugins/
+      - title: 衍生资源
+        icon: catppuccin:unity
+        details: 包括但不限于插件配置、游戏地图、皮肤、脚本资源等
+        link: /resources/
 
-  - title: 衍生资源
-    icon: catppuccin:unity
-    details: 包括但不限于插件配置、游戏地图、皮肤、脚本资源等
-    link: /resources/
+      - title: 文字教程
+        icon: catppuccin:lib
+        details: 开服教程、插件使用技巧、原版游戏技巧等等
+        link: /books/
 
-  - title: 文字教程
-    icon: catppuccin:lib
-    details: 开服教程、插件使用技巧、原版游戏技巧等等
-    link: /books/
-
-  - title: 工具箱
-    icon: catppuccin:makefile
-    details: 开服工具箱
-    link: /tools/
+      - title: 工具箱
+        icon: catppuccin:makefile
+        details: 开服工具箱
+        link: /tools/
 
 
 copyright: false
