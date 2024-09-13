@@ -48,8 +48,8 @@ Mythic功能如下：
 - 还有更多功能，就不一一列举了
 
 ### Getting Started 入门
-- Commands 命令
-- Permissions 权限
+- [Commands 命令](Commands.md)
+- [Permissions 权限](Commands.md)
 - FAQ's 常见问题
 - Examples 示例
 - Guides 指南
