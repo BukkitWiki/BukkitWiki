@@ -4,6 +4,15 @@ dir:
   link: true
 ---
 
+### 关于本文档
+::: tip 
+本文档由BukkitWiki官方团队进行翻译，如果发现内容翻译有问题，请提交给BukkitWiki官方团队或你想修改某个页面的内容请点击页面左下角的`在 GitHub 上编辑此页`
+
+原文链接：[https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/home](https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/home)
+:::
+
+
+
 ### 什么是Mythic？
 Mythic 允许服务器所有者完全修改服务器上任何非玩家实体的所有属性，甚至允许创建自己的自定义复杂系统！
 
@@ -54,5 +63,3 @@ Mythic功能如下：
 
 开发版本将包含未测试的功能，虽然其制作初衷是为了保证稳定性，但与任何测试版一样，开发版也无法保证其稳定性。它们可能会改变和或破坏您之前的 MythicMobs 配置，并可能包含错误和未完成的功能。请务必完整阅读更新日志。
 
-### 关于本文档
-本文档由BukkitWiki官方团队进行翻译，如果发现内容翻译有问题，请提交给BukkitWiki官方团队或你想修改某个页面的内容请点击页面左下角的`在 GitHub 上编辑此页`
