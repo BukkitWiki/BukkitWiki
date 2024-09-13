@@ -43,10 +43,11 @@ export default hopeTheme({
   plugins: {
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
     comment: {
-      // provider: "Artalk",
-      // server: 'http://localhost:23366',
-      // site: 'BukkitWiki',
-      // locale: 'zh-CN'
+      provider: "Giscus",
+      "repo": "BukkitWiki/BukkitWiki",
+      "repoId": "R_kgDOMv6LzA",
+      category: "Announcements",
+      categoryId: "DIC_kwDOMv6LzM4Cidf5"
     },
 
     components: {
