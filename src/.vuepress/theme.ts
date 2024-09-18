@@ -37,7 +37,7 @@ export default hopeTheme({
   },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
-  hotReload: true,
+  // hotReload: true,
 
   // 在这里配置主题提供的插件
   plugins: {
@@ -52,6 +52,12 @@ export default hopeTheme({
 
     components: {
       components: ["Badge", "VPCard","SiteInfo","BiliBili","VidStack"],
+    },
+
+    docsearch: {
+      appId: 'CFZ8V3A30M',
+      apiKey: '8d3449848af5bf76e4c0decf3e309368',
+      indexName: 'bukkit'
     },
 
     // searchPro: true,

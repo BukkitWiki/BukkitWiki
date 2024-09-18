@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.43",
     "@vuepress/plugin-search": "2.0.0-rc.39",
     "artalk": "^2.9.0",
     "dashjs": "^4.7.4",
