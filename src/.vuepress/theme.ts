@@ -62,6 +62,17 @@ export default hopeTheme({
 
     // searchPro: true,
 
+    
+    // notice: [
+    //   {
+    //     path: "/",
+    //     title: "标题",
+    //     content: "内容",
+    //     actions: [
+    //     ],
+    //   },
+    // ],
+
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
       align: true,
@@ -94,6 +105,7 @@ export default hopeTheme({
       tabs: true,
       tasklist: true,
       vPre: true,
+
 
       // 在启用之前安装 chart.js
       // chart: true,

@@ -41,7 +41,7 @@ highlights:
 
 
 copyright: false
-footer: BukkitWiki | 版权所有 © 2024
+footer: <span>友情链接：<a target='_blank' href="https://souts.cn/" alt="Souts博客">Souts</a></span><span> - </span><a target='_blank' href="https://breeze.snly.cc/" alt="铃音论坛">铃音论坛</a><br/>BukkitWiki | 版权所有 © 2024
 ---
 <script setup>
 const updateDate = '2024/9/11'
