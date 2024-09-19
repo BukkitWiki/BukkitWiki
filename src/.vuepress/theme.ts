@@ -56,7 +56,7 @@ export default hopeTheme({
 
     docsearch: {
       appId: 'CFZ8V3A30M',
-      apiKey: '8d3449848af5bf76e4c0decf3e309368',
+      apiKey: '1b5c44db1ba8535bf426f42857246983',
       indexName: 'bukkit'
     },
 
