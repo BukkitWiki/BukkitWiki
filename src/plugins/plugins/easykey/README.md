@@ -27,6 +27,10 @@ EasyKey是一款极其小巧的自定义按键的Mod+插件套件。
 ## 使用方法
 在客户端安装Mod，在服务端安装插件
 
+::: warning 
+前置下载地址 https://www.curseforge.com/minecraft/mc-mods/architectury-api
+:::
+
 ## 配置文件
 只有两个文件 `config.yml` 和 `keys.yml`
 其中 `config.yml` 是给后续拓展留着的文件（目前一点用没有）  
