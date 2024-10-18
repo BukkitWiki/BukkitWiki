@@ -1,12 +1,13 @@
 ---
-title: API
+order: 4
 ---
+# API
 
-### JavaDocs
+## JavaDocs
 [https://www.mythiccraft.io/javadocs/mythic/](https://www.mythiccraft.io/javadocs/mythic/)
 
-### 仓库
-#### Maven
+## 仓库
+### Maven
 ```xml
 <repository>
     <id>nexus</id>
@@ -14,7 +15,7 @@ title: API
     <url>https://mvn.lumine.io/repository/maven-public/</url>
 </repository>
 ```
-#### Gradle(Groovy)
+### Gradle(Groovy)
 ```groovy
 repositories {
     // ...
@@ -22,7 +23,7 @@ repositories {
     maven { url 'https://mvn.lumine.io/repository/maven-public/' }
 }
 ```
-#### Gradle(Kotlin)
+### Gradle(Kotlin)
 ```kotlin
 repositories {
     // ...
@@ -31,8 +32,8 @@ repositories {
 }
 ```
 
-### 引入依赖
-#### Maven
+## 引入依赖
+### Maven
 ```xml
 <dependency>
     <groupId>io.lumine</groupId>
@@ -41,14 +42,14 @@ repositories {
     <scope>provided</scope>
 </dependency>
 ```
-#### Gradle(Groovy)
+### Gradle(Groovy)
 ```groovy
 dependencies {
     //...
     compileOnly 'io.lumine:Mythic-Dist:5.6.1'
 }
 ```
-#### Gradle(Kotlin)
+### Gradle(Kotlin)
 ```kotlin
 dependencies {
     // ...
@@ -56,15 +57,15 @@ dependencies {
 }
 ```
 
-### 示例
+## 示例
 
-MythicMobs API包含大量事件和工具类，帮助开发者使用怪物、物品和技能系统
+MythicMobs API 包含大量事件和工具类，帮助开发者使用怪物、物品和技能系统
 
 这里有一些帮助入门的示例
 
 [MythicMobs API Examples Repo](https://github.com/xikage/MythicMobs-API-Examples)
 
-#### 生成怪物示例
+### 生成怪物示例
 ```java
 MythicMob mob = MythicBukkit.inst().getMobManager().getMythicMob("SkeletalKnight").orElse(null);
 Location spawnLocation = player.getLocation();
@@ -77,7 +78,7 @@ if(mob != null){
 }
 ```
 
-#### 检查Bukkit实体是否是mm怪物
+### 检查 Bukkit 实体是否是 MM 怪物
 ```java
 Entity bukkitEntity = ...;
 boolean isMythicMob = MythicBukkit.inst().getMobManager().isMythicMob(bukkitEntity);
@@ -86,7 +87,7 @@ if(isMythicMob){
 }
 ```
 
-#### 将Bukkit实体转换为mm的ActiveMob实例
+### 将 Bukkit 实体转换为 MM 的 ActiveMob 实例
 ```java
 Entity bukkitEntity = ...;
 Optional<ActiveMob> optActiveMob = MythicBukkit.inst().getMobManager().getActiveMob(bukkitEntity.getUniqueId());
@@ -95,7 +96,7 @@ optActiveMob.ifPresent(activeMob -> {
 }).orElse(() -> /* ... */);
 ```
 
-#### 使用名字获取ActiveMob实例集合
+### 使用名字获取 ActiveMob 实例集合
 ```java
 Collection<ActiveMob> activeMobs = MythicBukkit.inst().getMobManager().getActiveMobs(am -> am.getMobType().equals("SkeletalKnight"));
 ```

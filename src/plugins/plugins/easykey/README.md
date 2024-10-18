@@ -7,6 +7,7 @@ dir:
   link: true
 ---
 
+
 ## 简介
 EasyKey是一款极其小巧的自定义按键的Mod+插件套件。  
 

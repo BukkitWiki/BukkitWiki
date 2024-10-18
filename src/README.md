@@ -45,6 +45,8 @@ footer: <span>友情链接：<a target='_blank' href="https://souts.cn/" alt="So
 ---
 <script setup>
 const updateDate = '2024/9/11'
+
+
 const data = [
   {
     name: 'Taboolib',
@@ -67,7 +69,7 @@ const data = [
 <br>
 
 ::: center 
-<h2 class='vp-feature-header'><a class="header-anchor" id="热门项目" href="#热门项目"  style="font-weight:600;color: var(--text-color-lighter);">热门项目</a></h2>
+<h2 class='vp-feature-header'><a class="header-anchor" id="热门项目" href="#热门项目"  style="font-size:28px;font-weight:600;color: var(--text-color-lighter);">热门项目</a></h2>
 :::
 ::: right
 更新时间: {{ updateDate }}

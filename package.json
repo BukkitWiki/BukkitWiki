@@ -16,6 +16,7 @@
     "@vuepress/plugin-search": "2.0.0-rc.39",
     "artalk": "^2.9.0",
     "dashjs": "^4.7.4",
+    "flowchart.ts": "^3.0.1",
     "hls.js": "^1.5.15",
     "vidstack": "^1.12.9",
     "vue": "^3.5.5",

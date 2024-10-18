@@ -22,7 +22,7 @@ export default hopeTheme({
 
 
   // 页脚
-  footer: "默认页脚",
+  footer: "2024©BukkitWiki",
   displayFooter: true,
 
   // 加密配置
@@ -37,7 +37,7 @@ export default hopeTheme({
   },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
-  // hotReload: true,
+  hotReload: true,
 
   // 在这里配置主题提供的插件
   plugins: {
@@ -51,7 +51,7 @@ export default hopeTheme({
     },
 
     components: {
-      components: ["Badge", "VPCard","SiteInfo","BiliBili","VidStack"],
+      components: ["Badge", "VPCard","SiteInfo","BiliBili","VidStack"]
     },
 
     docsearch: {
@@ -72,6 +72,7 @@ export default hopeTheme({
     //     ],
     //   },
     // ],
+    
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
@@ -116,7 +117,7 @@ export default hopeTheme({
       // echarts: true,
 
       // 在启用之前安装 flowchart.ts
-      // flowchart: true,
+      flowchart: true,
 
       // gfm requires mathjax-full to provide tex support
       // gfm: true,

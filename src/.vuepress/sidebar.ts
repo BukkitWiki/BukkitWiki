@@ -9,7 +9,11 @@ export default sidebar({
       prefix: 'guide/',
       children: "structure",
       collapsible: true
-    }
+    },
+    "/plugins/",
+    "/resources/",
+    "/books/",
+    "/tools/"
   ],
   "/plugins/" : "structure",
   "/resources/":"structure",

@@ -1,4 +1,8 @@
-# 物品
+---
+title: '物品'
+dir:
+  link: true
+---
 
 ![](https://raw.githubusercontent.com/BukkitWiki/Picture/main/pic/2024/mm_items_image.png)
 
@@ -11,15 +15,15 @@
 
 ## 物品配置解析
 
-### Internal_Name
+### Internal_Name 内部名称
 
-这个字符串将是你在 MythicMobs 中内部引用物品的方式，可以是任何你喜欢的名称。必须是字母数字，**不允许有空格**。
+这个字段将是你在 MythicMobs 中内获取物品的方式，可以是任何你喜欢的名称。必须是字母数字，**不允许有空格**。
 
 ```yaml
 example_item:
 ```
 
-### Id
+### Id 基础材质
 
 为你的物品所使用的基础材质，可以是[这里](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)列出的任何有效物品。
 
@@ -28,10 +32,10 @@ example_item:
   Id: leather_chestplate
 ```
 
-### Template
+### Template 模板
 
-
-物品可以使用像怪物一样的[模板](#TODO('模板'))，同时引用其他物品。  
+#TODO()
+物品可以使用像怪物一样的[模板]()，同时引用其他物品。  
 一次只能使用一个模板。
 
 ```yaml
@@ -39,7 +43,7 @@ MyItem:
   Template: MyOtherItem
 ```
 
-### Display
+### Display 显示名称
 
 设置物品显示的名称。
 
@@ -49,9 +53,9 @@ example_item:
   Display: <green>一个示例物品</green>
 ```
 
-### Lore
+### Lore 描述
 
-设置物品的Lore。你可以使用 `{min-max}` 、`<random.#to#>` 或 `<random.float.#to#>` 生成一个随机数。
+设置物品的Lore。你可以使用 `{min-max}` 、 `<random.#to#>` 或 `<random.float.#to#>` 生成一个随机数。
 
 ```yaml
 example_item:
@@ -65,9 +69,9 @@ example_item:
     - 有一些符号，比如<&sq>, 不应该直接放入配置中。请使用占位符！
 ```
 
-### CustomModelData
+### CustomModelData 自定义材质数据
 
-设置物品上的 `CustomModelData` 标签。`Model` 也是 `CustomModelData` 的另一个别名。
+设置物品上的 `CustomModelData` 标签。`Model` 也是 `CustomModelData` 的另一个别称。
 
 ```yaml
 example_item:
@@ -83,7 +87,7 @@ example_item:
   Model: 12345
 ```
 
-### Durability
+### Durability 耐久度
 
 设置物品的耐久度减少量。以下示例将钻石剑的耐久度设置为1461，因为默认情况下它的耐久度为1561。
 
@@ -94,10 +98,9 @@ example_item:
   Display: <green>一个示例物品</green>
 ```
 
-### Attributes
+### Attributes 属性
 
-#TODO()
-特殊字段，允许向某些装备槽添加物品属性。参见[物品属性]()。
+特殊字段，允许向某些装备槽添加物品属性。参见[物品属性](Attributes.md)。
 
 ```yaml
 example_item:
@@ -108,7 +111,7 @@ example_item:
       Health: 25
 ```
 
-### Amount
+### Amount 数量
 
 设置当插件调用此物品时，默认给予的物品数量。
 
@@ -119,10 +122,9 @@ example_item:
   Amount: 1
 ```
 
-### Options
+### Options 其他配置
 
-#TODO()
-一个带有多个子选项的特殊字段。参见[物品选项]()。
+一个带有多个子选项的特殊字段。参见[其他配置](Options.md)。
 
 ```yaml
 example_item:
@@ -133,10 +135,9 @@ example_item:
     Color: 255,0,0
 ```
 
-### Enchantments
+### Enchantments 附魔
 
-#TODO()
-任何物品都可以拥有任何附魔效果。可以在[此处](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html)找到可用的附魔列表。另请参阅[附魔]()页面，了解如何配置物品的附魔效果。
+任何物品都可以拥有任何附魔效果。可以在[此处](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html)找到可用的附魔列表。另请参阅[附魔](Enchantments.md)页面，了解如何配置物品的附魔效果。
 
 ```yaml
 example_item:
@@ -149,7 +150,7 @@ example_item:
     - THORNS:3
 ```
 
-### Hide
+### Hide 隐藏内容
 
 特殊字段允许从物品提示框中隐藏特定内容。所有可能的标志都可以在这里找到:
 
@@ -174,10 +175,9 @@ example_item:
     - ENCHANTS
 ```
 
-### PotionEffects
+### PotionEffects 药水效果
 
-#TODO()
-设置物品的药水效果。如果[基础材质](#id)不是`药水`、`喷溅型药水`、`滞留型药水`或`药水箭` 这些效果将不会起任何作用。参见[药水]()。
+设置物品的药水效果。如果[基础材质](#id)不是`药水`、`喷溅型药水`、`滞留型药水`或`药水箭` 这些效果将不会起任何作用。参见[药水](Potion.md)。
 
 ```yaml
 example_item:
@@ -189,10 +189,9 @@ example_item:
     - CONFUSION 100 2
 ```
 
-### BannerLayers
+### BannerLayers 旗帜层
 
-#TODO()
-设置旗帜或盾牌的旗帜层。参见[旗帜层]()。
+设置旗帜或盾牌的旗帜层。参见[旗帜层](Banner-Layers.md)。
 
 ```yaml
 example_item:
@@ -203,7 +202,7 @@ example_item:
     - WHITE STRIPE_CENTER
 ```
 
-### CanPlaceOn
+### CanPlaceOn 冒险放置
 
 设置该物品可以放置在哪些方块上，如果玩家处于冒险模式。
 
@@ -214,7 +213,7 @@ MyCoolAnvil:
   - diamond_block
 ```
 
-### CanBreak
+### CanBreak 冒险破坏
 
 设置该物品可以破坏的方块，如果玩家处于冒险模式。
 
@@ -227,7 +226,7 @@ MyCoolStick:
   - obsidian
 ```
 
-### Group
+### Group 组
 
 为物品设置所属的组 `/mm items browse`。
 
@@ -238,15 +237,15 @@ example_item:
   Group: 'Armor'
 ```
 
-### NBT
+### NBT 标签
 
-设置物品的NBT标签。这允许与其他插件进行交叉操作，或者仅用于存储自定义信息。  
-在向物品添加NBT标签之前，您需要了解 [SNBT 格式](https://minecraft.fandom.com/wiki/NBT_format#SNBT_format)。可以通过在标签值前添加前缀来更改标签值的类型:
+设置物品的 NBT 标签。这允许与其他插件进行交叉操作，或者仅用于存储自定义信息。  
+在向物品添加 NBT 标签之前，您需要了解 [SNBT 格式](https://minecraft.fandom.com/wiki/NBT_format#SNBT_format)。可以通过在标签值前添加前缀来更改标签值的类型:
 
 | Prefixes | int/ | float/ | double/ | byte/ | bool/ | boolean/ |
 | - | - | - | - | - | - | - |
 
-将以下snbt: `{name1:123,name2:"sometext1",name3:{subname1:456,subname2:"sometext2"}}` 转换为mythic格式:
+将以下 snbt: `{name1:123,name2:"sometext1",name3:{subname1:456,subname2:"sometext2"}}` 转换为 mythic 格式:
 
 ```yaml
 example_item:
@@ -297,7 +296,7 @@ another_example_item:
       somedenizentag: a_string
 ```
 
-### Armor Trim NBT
+### Armor Trim NBT 特殊标签
 
 ```yaml
 another_example_item: 
@@ -316,11 +315,10 @@ Trim_1_21:
     Trim: amethyst.shaper
 ```
 
-### Firework
+### Firework 烟花
 
-#TODO()
 设置多个烟花或烟火之星物品。
-请参阅[烟花]()以了解每个选项的详细说明。
+请参阅[烟花](Firework.md)以了解每个选项的详细说明。
 
 ```yaml
 example_item:
@@ -335,7 +333,7 @@ example_item:
     Trail: true
 ```
 
-### Book
+### Book 成书
 
 一整本成书选项
 
@@ -350,9 +348,7 @@ SomeBook:
   - "Page 3"
 ```
 
-### Food
-
-食物物品配置
+### Food 食物
 
 ```yaml
 NetheritePops:
@@ -367,7 +363,7 @@ NetheritePops:
     - regeneration{duration=60}
 ```
 
-| Effects属性 | 别名 | 描述 | 默认 |
+| Effects属性 | 别称 | 描述 | 默认 |
 | - | - | - | - |
 | duration | d | 效果持续时间 | 60 |
 | level | l | 效果等级 实际是这个配置 +1 的等级 | 0 |
@@ -375,7 +371,7 @@ NetheritePops:
 | hasparticles | particles, p | 是否存在粒子效果 | true |
 | hasicon | icon, i | 是否显示图标 | true |
 
-## Examples
+## Examples 示例
 
 #TODO()
 更多物品示例可以在[示例]()部分找到。

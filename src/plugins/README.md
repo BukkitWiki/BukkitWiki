@@ -4,5 +4,6 @@ icon: catppuccin:wxt
 ---
 
 <div class="catalog-display-container">
-  <Catalog base='/plugins/' level='2'/>
+  <Catalog base='/plugins/' level='1'/>
 </div>
+
