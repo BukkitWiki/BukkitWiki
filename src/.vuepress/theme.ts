@@ -51,7 +51,7 @@ export default hopeTheme({
     },
 
     components: {
-      components: ["Badge", "VPCard","SiteInfo","BiliBili","VidStack"]
+      components: ["Badge", "VPCard","SiteInfo","BiliBili","VidStack","VPBanner"]
     },
 
     docsearch: {
