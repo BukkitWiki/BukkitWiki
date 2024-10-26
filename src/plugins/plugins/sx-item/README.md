@@ -22,6 +22,7 @@ dir:
 
 ## 前言
 
+本文原文链接：[https://www.maplex.top/archives/sxitem](https://www.maplex.top/archives/sxitem)  
 
 经历了 三四年的迭代 (2018~至今) 从 最初的 SX-Attribute2.0 迭代到 SX-Attribute 3.0
 现在将SX-Attribute3.0的物品功能分离出来（重写）
