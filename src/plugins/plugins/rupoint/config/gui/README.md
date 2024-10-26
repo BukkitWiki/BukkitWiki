@@ -14,7 +14,7 @@ msg:
 
 layout:
   - 'XXXXXXXXX'
-  - 'XABXXXXXX'
+  - 'XABCXXXXX'
   - 'XXXXXXXXX'
 
 slots:
@@ -26,6 +26,8 @@ slots:
   A:
     type: 'resource'
     id: gongji
+    points:
+      normal: 1
     maxChance: 100
     chance: 80
     successSound: 'ENTITY_PLAYER_LEVELUP'
@@ -48,7 +50,7 @@ slots:
             - '加点成功几率: %chance%'
             - '&b成功率: %chance%%'
             - '--------------'
-            - '可用属性点: %point_me%'
+            - '可用属性点: %rupoint_points_normal%'
     item:
       material: 'apple'
       name: '攻击'
@@ -59,10 +61,25 @@ slots:
         - '&a当前属性点: %point%'
         - '&b成功率: %chance%%'
         - '&7--------------'
-        - '&6可用属性点: %point_me%'
+        - '&6可用属性点: %rupoint_points_normal%'
   B:
     type: 'resource'
     id: hujia
+    points:
+      normal: 1
+    before: |-
+        const random = Math.random()
+        if(random < 0.5){
+            return true;
+        }else{
+            player.sendMessage('触发了执行前检查')
+            return false;
+        }
+    after: |-
+      const random = Math.random()
+      if(random < 0.5){
+        player.sendMessage('触发了执行后脚本')
+      }
     maxChance: 100
     chance: |-
       let now = +(80 - (point*10))
@@ -84,7 +101,30 @@ slots:
         - '&a当前属性点: %point%'
         - '&b成功率: %chance%%'
         - '&7--------------'
-        - '&6可用属性点: %point_me%'
+        - '&6可用属性点: %rupoint_points_normal%'
+  C:
+    type: 'resource'
+    id: baoji
+    points:
+      high: 5
+    money: 100
+    maxChance: 100
+    chance: 10
+    msg:
+      - '成功给暴击率加点'
+    msgFalse:
+      - '加点失败'
+    item:
+      material: 'egg'
+      name: '暴击率'
+      lore:
+        - '&7----------------'
+        - '&a当前效果:'
+        - '&f%resource_attribute%'
+        - '&a当前属性点: %point%'
+        - '&b成功率: %chance%%'
+        - '&7--------------'
+        - '&6可用属性点: %rupoint_points_high%'
 ```
 
 

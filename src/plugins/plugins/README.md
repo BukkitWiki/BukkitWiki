@@ -10,3 +10,6 @@ dir:
 <div class="catalog-display-container">
   <Catalog base='/plugins/plugins/' level='1'/>
 </div>
+
+<PluginBanner/>
+

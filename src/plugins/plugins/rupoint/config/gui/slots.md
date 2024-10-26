@@ -79,21 +79,76 @@ slots:
 
 ### type
 槽位类型  
-- frame 边框
-- resource 加点属性源配置
+- [frame 边框](#边框)
+- [resource 加点属性源配置](#加点属性源配置)
+- [cmd 命令](#命令)
 
 ## 边框
 
 当type为frame此物品为一个没有任何功能的边框物品
 只需要填入一个item物品配置
 
+## 命令
+
+示例
+``` yaml
+D:
+  type: 'cmd'
+  item:
+    material: stone
+  console:
+    - '这里是控制台执行命令'
+  admin:
+    - '这里是以管理员身份执行的命令'
+  player:
+    - '这里是以玩家自身身份执行的命令'
+```
+
 ## 加点属性源配置
 
-### id
+### id(必填)
 对应resources.yml中的一级键名
+### points(必填)
+消耗的属性点及数量  
+支持整数或js表达式
+``` yaml
+points:
+  normal: 1
+  high: |-
+    return (player.getLevel())
+```
+### before
+在加点执行前（在检查玩家是否拥有属性点之后）运行的js脚本
+``` yaml
+before: |-
+  const random = Math.random()
+  if(random < 0.5){
+      return true;
+  }else{
+      player.sendMessage('触发了执行前检查')
+      return false;
+  }
+```
+需要一个Boolean类型返回值(true,false) 返回true代表会继续执行 返回false代表不会继续执行  
 
+### after
+
+会在加点执行后执行 无论是否加点成功都会执行
+``` yaml
+after: |-
+  const random = Math.random()
+  if(random < 0.5){
+    player.sendMessage('触发了执行后脚本')
+  }
+```
+
+### money
+加点消耗的金币 支持整数或js表达式
+``` yaml
+money: 100
+```
 ### maxChance
-概率最大值
+概率最大值 仅支持整数
 ### chance
 概率值 可填整数或js表达式
 ### successSound

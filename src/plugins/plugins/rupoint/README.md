@@ -2,7 +2,7 @@
 title: 'RuPoint —— 属性加点'
 shortTitle: 'RuPoint'
 isOriginal: true
-tag: ['付费 ','原创']
+tag: ['付费','原创']
 dir:
   link: true
 ---
