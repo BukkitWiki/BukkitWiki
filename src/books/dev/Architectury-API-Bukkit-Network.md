@@ -139,7 +139,7 @@ private fun send(player:Player,buf: ByteBuf){
 
 ## 后言
 
-以上代码来自 [EasyKey](http://localhost:8080/plugins/plugins/easykey/)
+以上代码来自 [EasyKey](/plugins/plugins/easykey/)
 
 插件API版本：  
 spigot1.20.4   
