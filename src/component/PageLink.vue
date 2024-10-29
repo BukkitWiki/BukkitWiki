@@ -49,15 +49,15 @@ const title = route.meta.t
 }
 
 .link-container:hover {
-  border-color: rgba(0, 123, 255, 0.5);
-  color: rgba(0, 123, 255, 0.8);
+  border-color: var(--vp-c-accent, #299764);
+  color: var(--vp-c-accent-hover, #299764);
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  color: var(--text-color);
+  color: var(--vp-c-text, rgb(60, 60, 67));
   text-decoration: none;
 
 }
@@ -68,7 +68,7 @@ const title = route.meta.t
 }
 
 .link-container:hover .text {
-  color: var(--theme-color);;
+  color: var(--vp-c-accent-hover, #299764);
 }
 
 .chevron-icon {
@@ -77,12 +77,12 @@ const title = route.meta.t
   mask-repeat: no-repeat;
   mask-position: center;
   transition: transform 0.3s, background-color 0.3s;
-  color: var(--text-color);
+  color: var(--vp-c-text, rgb(60, 60, 67));
 }
 
 .link-container:hover .chevron-icon {
   transform: translateX(4px);
-  color: var(--theme-color);
+  color: var(--vp-c-accent-hover, #299764);
 }
 
 .top-box{

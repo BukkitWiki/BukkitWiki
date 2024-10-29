@@ -75,37 +75,42 @@ export default hopeTheme({
 
     blog: true,
 
+    markdownTab:{
+      codeTabs: true,
+      tabs: true
+    },
+    markdownImage:{
+      figure: true,
+      lazyload: true,
+      size: true
+    },
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
       align: true,
       attrs: true,
-      codetabs: true,
       component: true,
       demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
       include: true,
       mark: true,
       plantuml: true,
       spoiler: true,
       stylize: [
         {
-          matcher: "Recommended",
+          matcher: "推荐",
           replacer: ({ tag }) => {
             if (tag === "em")
               return {
                 tag: "Badge",
                 attrs: { type: "tip" },
-                content: "Recommended",
+                content: "推荐",
               };
           },
+
         },
       ],
       sub: true,
       sup: true,
-      tabs: true,
       tasklist: true,
       vPre: true,
 
