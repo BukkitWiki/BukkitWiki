@@ -1,5 +1,5 @@
 ---
-title: 'Trmenu'
+title: 'TrMenu'
 dir:
   link: true 
 ---
