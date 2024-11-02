@@ -138,6 +138,13 @@ material: 'source:MAGICGEM:itemId'
 material: 'source:MG:itemId'
 ```
 
+### AzureFlow
+
+```
+material: 'source:AZUREFLOW:itemId'
+material: 'source:AF:itemId'
+```
+
 ### HMCCosmetics
 
 ```yaml
