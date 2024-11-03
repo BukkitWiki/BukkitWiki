@@ -65,7 +65,7 @@
 
 > 向玩家发送一条原版 Json 消息，或利用 TrMenu 轻松构建一条
 
-::: tabs
+::: code-tabs
 
 @tab 原版 JSON
 ```yaml
@@ -322,7 +322,7 @@
 > {meta: input} 最后一次输入的内容
 
 #### 配置
-::: tabs
+::: code-tabs
 @tab 聊天框
 ```yaml
 - catcher:

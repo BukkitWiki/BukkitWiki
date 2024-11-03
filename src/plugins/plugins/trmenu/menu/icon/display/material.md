@@ -140,7 +140,7 @@ material: 'source:MG:itemId'
 
 ### AzureFlow
 
-```
+```yaml
 material: 'source:AZUREFLOW:itemId'
 material: 'source:AF:itemId'
 ```
