@@ -18,4 +18,5 @@
 | MagicCosmetics | 时装        |
 | MagicGem       | 物品材质      |
 | Triton         | 语言        |
-| MythicMobs     | 物品        |
+| MythicMobs     | 物品材质        |
+| AzureFlow      | 物品材质        |
