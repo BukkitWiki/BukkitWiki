@@ -42,6 +42,9 @@ Options:
   Multi-Thread: true
   # 异步载入菜单
   Async-Load-Menus: true
+  # 是否启用并发加载菜单
+  # 启用后会导致多级捕获器顺序错乱
+  Load-Menu-Concurrent: false
 
 #
 # 插件的玩家数据储存方式
