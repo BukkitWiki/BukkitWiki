@@ -44,17 +44,17 @@ copyright: false
 footer: <span>友情链接：<a target='_blank' href="https://souts.cn/" alt="Souts博客">Souts</a></span><span> - </span><br/>BukkitWiki | 版权所有 © 2024
 ---
 <script setup>
-const updateDate = '2024/9/11'
+const updateDate = '2024/11/13'
 
 
 const data = [
   {
-    name: 'Taboolib',
-    desc: '跨平台服务端插件开发框架'
+    name: 'ConditionalEvents',
+    desc: '事件驱动的脚本插件'
   },
   {
     name: 'Trmenu',
-    desc: '菜单'
+    desc: '菜单插件'
   },
   {
     name: 'MythicMobs',
