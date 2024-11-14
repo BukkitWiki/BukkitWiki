@@ -7,7 +7,7 @@ export default defineUserConfig({
 
   lang: "zh-CN",
   title: "BukkitWiki",
-  description: "Minecraft多人联机文档库",
+  description: "Minecraft(我的世界)多人联机服务器文档库|我的世界服务器文档",
 
   theme,
 

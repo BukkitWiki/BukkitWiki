@@ -39,6 +39,12 @@ highlights:
         details: 开服工具箱
         link: /tools/
 
+head:
+  - - meta
+    - name: keywords
+      content: '我的世界服务器文档'
+    - name: keywords
+      content: '我的世界中文服务器文档'
 
 copyright: false
 footer: <span>友情链接：<a target='_blank' href="https://souts.cn/" alt="Souts博客">Souts</a></span><span> - </span><br/>BukkitWiki | 版权所有 © 2024

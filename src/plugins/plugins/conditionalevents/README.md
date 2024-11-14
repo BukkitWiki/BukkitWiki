@@ -2,6 +2,14 @@
 title: 'ConditionalEvents'
 dir:
   link: true
+head:
+  - - meta
+    - name: keywords
+      content: 'ConditionEvents中文Wiki'
+    - name: keywords
+      content: 'ConditionEvents中文文档'
+description:
+  - "ConditionalEvents中文文档"
 ---
 
 <VPBanner
