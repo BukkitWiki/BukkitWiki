@@ -2167,6 +2167,10 @@ const origin = {
     ],
 };
 
+const clearSearch = (()=>{
+    search.value = ""
+});
+
 const searchData = computed(() => {
   const keyword = search.value.trim().toLowerCase();
   if (!keyword) return origin;
@@ -2180,8 +2184,7 @@ const searchData = computed(() => {
     }
 
     const filteredItems = items.filter(item =>
-      item.name.toLowerCase().includes(keyword) || PinyinMatch.match(item.name,keyword) ||
-      item.desc.toLowerCase().includes(keyword) || PinyinMatch.match(item.desc,keyword)
+      PinyinMatch.match(item.name+item.desc,keyword)
     );
 
     if (filteredItems.length > 0) {
@@ -2194,13 +2197,13 @@ const searchData = computed(() => {
 
 const pageData = usePageData();
 function hasUsage(obj){
-    const routePath = resolveRoutePath(`${obj.name.split(',')[0]}.md`, pageData.value.path);
+    const routePath = resolveRoutePath(`./usage/${obj.name.split(',')[0]}.md`, pageData.value.path);
     const route = resolveRoute(routePath);
     return !route.notFound
 }
 
 function getUsage(obj){
-    const routePath = resolveRoutePath(`${obj.name.split(',')[0]}.md`, pageData.value.path);
+    const routePath = resolveRoutePath(`./usage/${obj.name.split(',')[0]}.md`, pageData.value.path);
     const route = resolveRoute(routePath);
     if(route.notFound){
         return "/plugins/plugins/dragoncore/usage/NotFound.md"
@@ -2212,24 +2215,25 @@ function getUsage(obj){
 </script>
 <style scoped>
 .search-container {
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   margin: 0 20px;
 }
 
 .search-input {
   width: 100%;
-  max-width: 400px;
-  padding: 10px 15px;
+  padding: 10px 40px 10px 15px;
   border: 1px solid #ddd;
   border-radius: 25px;
   font-size: 16px;
-  color: var(--vp-c-text);
+  color: #333;
   outline: none;
   transition: all 0.3s ease;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 /* 输入框聚焦效果 */
 .search-input:focus {
   border-color: #3aaf85;
@@ -2245,10 +2249,47 @@ function getUsage(obj){
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
+.clear-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.clear-button:hover {
+  color: #333;
+}
+
+.clear-button:focus {
+  outline: none;
+}
 </style>
 
 <div class="search-container" style="margin-top: 3rem;">
     <input type="text" v-model="search" class="search-input" placeholder="请输入关键字...">
+    <button 
+      v-if="search" 
+      @click="clearSearch" 
+      class="clear-button" 
+      aria-label="清除关键字"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.6 7.1 5.7a1 1 0 0 0-1.4 1.4L10.6 12l-4.9 4.9a1 1 0 0 0 1.4 1.4L12 13.4l4.9 4.9a1 1 0 0 0 1.4-1.4L13.4 12l4.9-4.9a1 1 0 0 0 0-1.4z"
+        />
+      </svg>
+    </button>
 </div>
 <template v-for="(item,group) in searchData" :key="group">
     <h2>{{group}}</h2>
