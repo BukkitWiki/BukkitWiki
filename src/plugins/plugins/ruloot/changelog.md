@@ -6,9 +6,9 @@ title: 更新日志
 
 ### 刷新点
 增加刷新点模式配置
-normal - 普通模式,条件不满足直接返回冷却
-![](https://raw.githubusercontent.com/BukkitWiki/Picture/main/pic/2024/20241210013334.png)
-retry - 重试模式,条件不满足会一直重试直到满足条件
+normal - 普通模式,条件不满足直接返回冷却 如图所示  
+![](https://raw.githubusercontent.com/BukkitWiki/Picture/main/pic/2024/20241210013334.png)  
+retry - 重试模式,条件不满足会一直重试直到满足条件 如图所示  
 ![](https://raw.githubusercontent.com/BukkitWiki/Picture/main/pic/2024/20241210013355.png)
 
 刷新点条件配置修改格式 增加更多可选条件配置
@@ -40,7 +40,10 @@ retry - 重试模式,条件不满足会一直重试直到满足条件
     #   script: ''
 ```
 ### 战利品
-增加三个条件 damage - 伤害判断 rank - 排名判断 percentage - 百分比判断
+增加三个条件  
+damage - 伤害判断  
+rank - 排名判断  
+percentage - 百分比判断  
 ``` yaml
 condition:
 - type: 'damage' # 伤害判断 大于等于此值
@@ -50,7 +53,10 @@ condition:
 - type: 'percentage' # 百分比判断 大于等于此值
   percentage: 100
 ```
-增加三个奖励 js - 脚本奖励 kether - kether脚本奖励 exp - 经验奖励
+增加三个奖励  
+js - 脚本奖励  
+kether - kether脚本奖励  
+exp - 经验奖励  
 ```yaml
 reward:
 - type: 'js'
