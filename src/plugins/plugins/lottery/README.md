@@ -36,9 +36,34 @@ dir:
 - `/lottery stop` - 手动停止售卖
 - `/lottery draw` - 手动开奖
 
+## PlaceholderAPI变量
+- `%lottery_is_on_sale%` - 当前是否在售卖中
+- `%lottery_prize_pool%` - 当前奖池金额
+- `%lottery_ticket_price%` - 每张彩票价格
+- `%lottery_min_players%` - 最小参与人数
+- `%lottery_min_tickets%` - 最小购买数量
+- `%lottery_max_tickets%` - 最大购买数量
+- `%lottery_contribution_rate%` - 奖池分配比例
+- `%lottery_total_tickets%` - 当前总售出票数
+- `%lottery_participants%` - 当前参与人数
+- `%lottery_next_draw_sound%` - 距离下次开奖剩余秒数
+- `%lottery_next_draw_time%` - 下次开奖时间
+- `%lottery_player_tickets%` - 玩家持有的彩票数量
+
+
 ## 配置文件
 
 ```yaml
+
+database:
+  # 数据库类型 sqlite mysql
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    user: root
+    password: 123456
+    database: minecraft
 
 
 # 基础设置
@@ -72,7 +97,9 @@ prize-pool:
   initial-amount: 10000
   # 每张彩票分配到奖池的比例(0-1)
   contribution-rate: 0.8
-  
+  # 新一轮是否继承上一期奖池
+  inherit-pool: true
+
 # 中奖设置
 winning:
   # 一等奖
@@ -130,7 +157,7 @@ messages:
     - "&e彩票即将开奖!"
     - "&e距离开奖还有 &6%time% &e分钟"
   sale-remind:
-    - "&e&l⚡ 售卖提醒 ⚡" 
+    - "&e&l⚡ 售卖提醒 ⚡"
     - "&e彩票即将开始售卖!"
     - "&e距离开始售卖还有 &6%time% &e分钟"
   sale-start:
