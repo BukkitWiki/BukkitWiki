@@ -10,6 +10,10 @@ title: 刷新点配置
 # 当刷新点刷新时,会向所有人发送消息
 #
 Example:
+  # 刷新模式: 
+  # normal - 普通模式,条件不满足直接返回
+  # retry - 重试模式,条件不满足会一直重试直到满足条件
+  spawner_mode: 'normal'
   # 怪物id
   id: 'test'
   # 等级
@@ -45,14 +49,29 @@ Example:
   amount: 1
   # 刷新条件
   conditions:
-    # 在线人数要求
-    min-players: 5
-    # 天气要求
-    weather:
-      - CLEAR
-      - RAIN
-    # 刷新几率
-    chance: 100
+    # 在线玩家数量条件
+    - type: 'min_players'
+      min: 5
+    # 范围内玩家数量条件
+    - type: 'min_players_on_range'
+      range: 50
+      minPlayers: 3
+    # 概率
+    - type: 'chance'
+      value: 100
+    # 变量 只能用不基于玩家的变量
+    #- type: 'placeholder'
+    #  placeholder: '%player_name_1%'
+    #  value: '100'
+    # 天气条件
+    #- type: 'weather'
+    #  weather: 'sunny'
+    # # Kether脚本条件
+    # - type: 'kether'
+    #   script: ''
+    # JavaScript脚本条件
+    # - type: 'js'
+    #   script: ''
   # 刷新成功后执行的指令
   commands:
     - 'say 刷新了一个Boss!'

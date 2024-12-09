@@ -105,6 +105,28 @@ condition:
 - `totalDamage` 对应怪物所承受的总伤害
 :::
 
+##### 1.0.5 版本新增
+
+#### 伤害判断
+
+```yaml
+- type: 'damage'
+  damage: 100 # 大于等于此值
+```
+
+#### 排名判断
+
+```yaml
+- type: 'rank'
+  rank: 1 # 等于此值
+```
+
+#### 百分比判断
+
+```yaml
+- type: 'percentage'
+  percentage: 100 # 大于等于此值
+```
 
 #### Reward 奖励
 奖励有一个固定格式
@@ -153,6 +175,43 @@ reward:
   id: 'xxx' # SX-Items物品id
   amount: '10' # 数量 可写脚本
 ```
+
+#### 经验奖励
+
+```yaml
+- type: 'exp'
+  exp: 100
+```
+
+#### 命令奖励
+命令中有内部变量 
+- '%damage%' 对应玩家造成的伤害
+- '%rank%' 对应玩家排名
+- '%percentage%' 对应玩家造成的伤害百分比
+- '%totalDamage%' 对应怪物承受的总伤害
+- 也可以使用papi变量
+
+```yaml
+- type: 'cmd'
+  cmd: 'say 你获得了战利品'
+```
+
+#### js 脚本奖励
+
+```yaml
+- type: 'js'
+  script: |-
+    player.sendMessage('你获得了战利品');
+```
+
+#### kether 脚本奖励
+
+```yaml
+- type: 'kether'
+  script: |-
+    不会写
+```
+
 ### guaranteedReward 保底奖励
 和上面奖励一样(其实挺多余的 后期有新奇玩法再加)
 
