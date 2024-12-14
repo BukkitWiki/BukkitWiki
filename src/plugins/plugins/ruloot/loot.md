@@ -193,7 +193,15 @@ reward:
 
 ```yaml
 - type: 'cmd'
-  cmd: 'say 你获得了战利品'
+  # 控制台指令
+  console: 
+    - 'say 你获得了战利品'
+  # 管理员指令
+  op:
+    - ''
+  # 玩家指令
+  player:
+    - ''
 ```
 
 #### js 脚本奖励
