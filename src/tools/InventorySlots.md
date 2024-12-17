@@ -1,7 +1,7 @@
 ---
 title: "容器槽位"
 icon: 'subway:menu'
-order: 4
+order: 5
 ---
 <script setup lang="ts">
 import {computed, ref} from "vue"; 
