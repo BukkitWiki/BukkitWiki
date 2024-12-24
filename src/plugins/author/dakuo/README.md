@@ -7,5 +7,5 @@ dir:
 
 
 <div class="catalog-display-container">
-  <Catalog base='' level='1'/>
+  <Catalog base='' :level='1'/>
 </div>

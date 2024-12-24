@@ -38,6 +38,12 @@ QQ交流群： 642468469
 
 更多功能请查看详细文档和预览下面视频
 
+
+### 演示视频 (注魔书)
+
+<BiliBili bvid="BV1CMktY8ERj" />
+
+
 ### 演示视频 (宝石增强)
 <BiliBili bvid="BV1eT4EeNEPA" />
 

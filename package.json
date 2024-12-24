@@ -29,6 +29,7 @@
     "vuepress-theme-hope": "2.0.0-rc.59"
   },
   "dependencies": {
-    "moment": "^2.30.1"
+    "moment": "^2.30.1",
+    "pinyin-match": "^1.2.6"
   }
 }
