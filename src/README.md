@@ -47,7 +47,7 @@ head:
       content: '我的世界中文服务器文档'
 
 copyright: false
-footer: <span>友情链接：<a target='_blank' href="https://souts.cn/" alt="Souts博客">Souts</a></span><span> - </span><br/>BukkitWiki | 版权所有 © 2024
+footer: <span>友情链接：<a target='_blank' href="https://souts.cn/" alt="Souts博客">Souts</a></span><span> - </span><a target='_blank' href="https://mcnav.fun/" alt="星导航">星导航</a><br/>BukkitWiki | 版权所有 © 2024
 ---
 <script setup>
 const updateDate = '2024/11/13'
