@@ -64,7 +64,7 @@ title: '所有方法表'
 |[游戏统计, Minecraft_Stat]|[]|void|
 |[设置界面尺寸, Minecraft_Set_Gui_Scale]|[int]|void|
 |[取界面尺寸, Minecraft_Get_Gui_Scale]|[]|double|
-|[取当前界面名, Minecraft_Get_Screen_Name]|[]|java.lang.String|
+|[取当前游戏界面名, Minecraft_Get_Screen_Name]|[]|java.lang.String|
 |[取FPS, Minecraft_Get_FPS]|[]|int|
 |[退出游戏, Minecraft_Quit]|[]|void|
 |[执行方法, Function_Execute]|[class eos.moe.dragoncore.sl, class java.lang.String, class [Leos.moe.dragoncore.v;]|eos.moe.dragoncore.v|
