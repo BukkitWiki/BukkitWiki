@@ -8,14 +8,20 @@ import { ref, reactive, onMounted } from 'vue'
 
 // 从 localStorage 获取参与者列表,如果没有则使用空数组
 const getStoredParticipants = () => {
-  const stored = localStorage.getItem('participants')
-  return stored ? JSON.parse(stored) : []
+  if (typeof window !== "undefined") {
+    const stored = localStorage.getItem('participants')
+    return stored ? JSON.parse(stored) : []
+  }
+  return []
 }
 
 // 从 localStorage 获取中奖者列表,如果没有则使用空数组
 const getStoredResults = () => {
-  const stored = localStorage.getItem('results')
-  return stored ? JSON.parse(stored) : []
+  if (typeof window !== "undefined") {
+    const stored = localStorage.getItem('results')
+    return stored ? JSON.parse(stored) : []
+  }
+  return []
 }
 
 // 参与者列表
@@ -31,9 +37,6 @@ const success = ref('') // 新增成功提示
 // 抽取数量
 const drawCount = ref(1)
 
-// 抽奖音效
-const drawSound = new Audio('/draw-sound.mp3')
-
 // 抽奖动画配置
 const animationConfig = reactive({
   duration: 2000, // 动画持续时间
@@ -41,26 +44,30 @@ const animationConfig = reactive({
 })
 
 // 历史记录
-const drawHistory = ref(JSON.parse(localStorage.getItem('drawHistory') || '[]'))
+const drawHistory = ref(typeof window !== "undefined" ? JSON.parse(localStorage.getItem('drawHistory') || '[]') : [])
 
 // 监听参与者列表变化并保存到 localStorage
 const saveParticipants = () => {
-  localStorage.setItem('participants', JSON.stringify(participants.value))
+  if (typeof window !== "undefined") {
+    localStorage.setItem('participants', JSON.stringify(participants.value))
+  }
 }
 
 // 保存中奖结果到 localStorage
 const saveResults = () => {
-  localStorage.setItem('results', JSON.stringify(results.value))
-  // 保存到历史记录
-  const historyItem = {
-    id: Date.now(), // 添加唯一ID
-    date: new Date().toLocaleString(),
-    winners: [...results.value],
-    participants: [...participants.value]
+  if (typeof window !== "undefined") {
+    localStorage.setItem('results', JSON.stringify(results.value))
+    // 保存到历史记录
+    const historyItem = {
+      id: Date.now(), // 添加唯一ID
+      date: new Date().toLocaleString(),
+      winners: [...results.value],
+      participants: [...participants.value]
+    }
+    drawHistory.value.unshift(historyItem)
+    localStorage.setItem('drawHistory', JSON.stringify(drawHistory.value))
+    success.value = '✨ 抽奖成功!' // 添加成功提示
   }
-  drawHistory.value.unshift(historyItem)
-  localStorage.setItem('drawHistory', JSON.stringify(drawHistory.value))
-  success.value = '✨ 抽奖成功!' // 添加成功提示
 }
 
 // 清空参与者列表
@@ -196,7 +203,9 @@ const copyHistory = (winners) => {
 const removeHistory = (id) => {
   if(confirm('确定要删除这条记录吗?')) {
     drawHistory.value = drawHistory.value.filter(item => item.id !== id)
-    localStorage.setItem('drawHistory', JSON.stringify(drawHistory.value))
+    if (typeof window !== "undefined") {
+      localStorage.setItem('drawHistory', JSON.stringify(drawHistory.value))
+    }
     success.value = '✨ 删除成功!'
   }
 }
@@ -205,7 +214,9 @@ const removeHistory = (id) => {
 const clearHistory = () => {
   if(confirm('确定要清空所有历史记录吗?')) {
     drawHistory.value = []
-    localStorage.setItem('drawHistory', JSON.stringify(drawHistory.value))
+    if (typeof window !== "undefined") {
+      localStorage.setItem('drawHistory', JSON.stringify(drawHistory.value))
+    }
     success.value = '✨ 清空成功!'
   }
 }
@@ -228,9 +239,6 @@ const startDraw = () => {
   results.value = []
   let count = 0
   
-  // 播放抽奖音效
-  drawSound.currentTime = 0
-  drawSound.play()
   
   const timer = setInterval(() => {
     const tempResults = []
@@ -254,7 +262,6 @@ const startDraw = () => {
     if (count > 20) {
       clearInterval(timer)
       isDrawing.value = false
-      drawSound.pause()
       saveResults()
     }
   }, animationConfig.speed)
