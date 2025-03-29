@@ -47,3 +47,14 @@ nbt:
 
 * 支持使用变量
 
+## Item Model
+
+```yaml
+item_model: fish
+```
+
+## Tooltip Style
+
+```yaml
+tooltip: blue
+```
