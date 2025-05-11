@@ -59,7 +59,7 @@ const data = [
     desc: '事件驱动的脚本插件'
   },
   {
-    name: 'Trmenu',
+    name: 'TrMenu',
     desc: '菜单插件'
   },
   {
@@ -74,7 +74,7 @@ const data = [
 <br>
 <br>
 
-::: center 
+::: center
 <h2 class='vp-feature-header'><a class="header-anchor" id="热门项目" href="#热门项目"  style="font-size:28px;font-weight:600;color: var(--text-color-lighter);">热门项目</a></h2>
 :::
 ::: right
