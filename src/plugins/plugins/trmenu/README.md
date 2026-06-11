@@ -1,7 +1,7 @@
 ---
 title: 'TrMenu'
 dir:
-  link: true 
+  link: true
 ---
 
 # 首页
